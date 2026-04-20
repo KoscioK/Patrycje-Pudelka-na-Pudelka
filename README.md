@@ -96,5 +96,5 @@ Wypisany naglowek powinien zawierac informacje o znalezieniu `10` partycji.
 
 ## Uwagi praktyczne
 
-- Nazwa pliku w repozytorium to `partycje.py`.
+- Nazwa pliku w repozytorium to `partycja.py`.
 - W docstringu programu przyklady uzywaja nazwy `partycja.py`; przy uruchamianiu nalezy uzyc faktycznej nazwy pliku z repozytorium.
