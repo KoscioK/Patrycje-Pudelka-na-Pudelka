@@ -60,7 +60,45 @@ python3 partycje.py 2 2 2 --count-only
 
 ### 2) Tryb interaktywny
 
-Jesli nie podasz argumentow, program poprosi o wpisanie `n m k` przez `input()`.
+Jeśli nie podasz argumentów, program otworzy okno GUI do wpisania `n`, `m`, `k`.
+Po obliczeniu wyników pojawi się okno z listą wszystkich poprawnych partycji oraz opcjonalnym przyciskiem do uruchomienia wizualizacji 3D.
+
+Opcje uruchomienia (wybierz jedną):
+
+- Opcja A — Uruchom lokalnie z Pythona (wymaga instalacji zależności):
+  1. Zainstaluj Python 3.x (jeśli go nie masz).
+  2. (Opcjonalnie) stwórz i aktywuj virtualenv:
+
+  ```powershell
+  python -m venv venv
+  .\venv\Scripts\Activate.ps1
+  ```
+
+  3. Zainstaluj wymagane biblioteki:
+
+  ```powershell
+  pip install numpy matplotlib
+  ```
+
+  4. Uruchom program z poziomu katalogu projektu:
+
+  ```powershell
+  python partycja.py 2 2 2
+  ```
+
+  5. Aby tylko policzyć bez wizualizacji 3D użyj flagi `--count-only`:
+
+  ```powershell
+  python partycja.py 2 2 2 --count-only
+  ```
+
+- Opcja B — Uruchom gotowy plik `partycja.exe` (Windows, bez instalowania Pythona):
+  1. Pobierz lub rozpakuj plik `dist/partycja.exe` z repozytorium (np. z Release na GitHubie lub z archiwum `release.zip`).
+  2. Dwukrotnie kliknij `partycja.exe`, aby uruchomić aplikację w trybie okienkowym.
+
+  Uwaga: `partycja.exe` jest zbudowany dla Windows. Antywirusy mogą czasem oznaczyć samodzielne pliki wykonywalne jako podejrzane — jeśli tak się stanie, zezwól na uruchomienie lub rozpakuj oficjalne Release z GitHuba.
+
+Jeśli chcesz udostępnić program innym (np. na GitHub Releases), zamieść `dist/partycja.exe` lub `release.zip` z tym README, aby użytkownicy mogli łatwo pobrać gotową wersję.
 
 ## Flagi
 
@@ -70,6 +108,7 @@ Jesli nie podasz argumentow, program poprosi o wpisanie `n m k` przez `input()`.
 
 - Python 3.x
 - do wizualizacji: `numpy`, `matplotlib`
+- do okien GUI: `tkinter` (zwykle jest dostepny razem z Pythonem)
 
 Instalacja bibliotek:
 
