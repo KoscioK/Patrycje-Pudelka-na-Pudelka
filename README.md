@@ -2,9 +2,10 @@
 
 Program rozwiazuje problem partycjonowania prostopadloscianu o wymiarach calkowitych `n x m x k` na mniejsze prostopadlosciany o bokach rownoleglych do osi i dlugosciach calkowitych.
 
-Projekt zostal przygotowany wylacznie do celow edukacyjnych na potrzeby przedmiotu "Matematyka Dyskretna".
+Projekt jest publikowany jako samodzielne repozytorium z kodem zrodlowym, gotowe do uruchomienia lokalnie lub po sklonowaniu z GitHuba.
 
 Wynik to:
+
 - komplet wszystkich poprawnych partycji (jako multizbiory wymiarow),
 - liczba partycji,
 - przykladowe rzeczywiste ulozenie geometryczne dla kazdej partycji,
@@ -13,6 +14,7 @@ Wynik to:
 ## Definicja problemu
 
 Partycja `n x m x k` to multizbior mniejszych prostopadloscianow, ktore:
+
 - lacznie maja objetosc `n*m*k`,
 - daja sie ulozyc bez nakladania i bez luk, wypelniajac caly blok,
 - sa liczone po wymiarach (np. `(1,2,3)` i `(3,1,2)` to ten sam typ bloku).
@@ -26,12 +28,12 @@ Dwie partycje uznajemy za identyczne, gdy maja ten sam multizbior wymiarow (uloz
 - deduplikacja po kanonicznym multizbiorze wymiarow,
 - deterministyczne wypisywanie wynikow,
 - interaktywna wizualizacja 3D:
-	- transparentne bryly,
-	- ciemne krawedzie,
-	- osie X/Y/Z,
-	- przekroje po osiach X, Y, Z,
-	- suwak zoom,
-	- przyciski przechodzenia miedzy partycjami.
+  - transparentne bryly,
+  - ciemne krawedzie,
+  - osie X/Y/Z,
+  - przekroje po osiach X, Y, Z,
+  - suwak zoom,
+  - przyciski przechodzenia miedzy partycjami.
 
 ## Jak dziala algorytm
 
@@ -40,9 +42,9 @@ Dwie partycje uznajemy za identyczne, gdy maja ten sam multizbior wymiarow (uloz
 3. Backtracking wybiera pierwsza wolna komorke i probuje legalnie wstawic kazdy pasujacy blok.
 4. Pelne pokrycie (wszystkie bity ustawione) oznacza poprawne kafelkowanie.
 5. Dla kazdego kafelkowania tworzona jest reprezentacja kanoniczna:
-	 - wymiary pojedynczego bloku sa sortowane,
-	 - cala lista blokow jest sortowana,
-	 - dzieki temu rozne ulozenia geometryczne tej samej partycji sa laczone w jeden wynik.
+   - wymiary pojedynczego bloku sa sortowane,
+   - cala lista blokow jest sortowana,
+   - dzieki temu rozne ulozenia geometryczne tej samej partycji sa laczone w jeden wynik.
 
 To podejscie gwarantuje, ze raportowana partycja jest zarowno poprawna objetosciowo, jak i geometrycznie realizowalna.
 
